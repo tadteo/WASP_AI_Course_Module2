@@ -11,6 +11,6 @@ def generate_halfmoon(n1, n2, max_angle=np.pi):
 
 
 if __name__ == "__main__":
-    X1, y1, X2, y2 = generate_halfmoon(100, 100)
-    
+    X1, y1, X2, y2 = generate_halfmoon(n1=100, n2=100, max_angle=2)
     np.savez('halfmoon.npz', X1=X1, y1=y1, X2=X2, y2=y2)
+    

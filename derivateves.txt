@@ -1,0 +1,10 @@
+#! text
+F= (1/n)*sum(log(1+exp(-yi(<xi,w>+b)))))
+
+d/dw F = (1/n)*sum( (-y_i*x_i*exp(-y*(w[0]*x[0] + w[1]*x[1] + b))\
+     /(1+exp(-yi(<xi,w>+b))))
+
+https://www.wolframalpha.com/input?i=d%2Fdw+%28log%281%2Bexp%28-y_i%28x_i*w%2Bb%29%29%29%29
+
+d/db F = (1/n)*sum( (-y_i*exp(-y*(w[0]*x[0] + w[1]*x[1] + b))\)/(1+exp(-yi(<xi,w>+b))))
+https://www.wolframalpha.com/input?i=d%2Fdb+%28log%281%2Bexp%28-y_i%28x_i*w%2Bb%29%29%29%29

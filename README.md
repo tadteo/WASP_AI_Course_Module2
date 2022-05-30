@@ -35,10 +35,10 @@ Decision Boundary for $\alpha = 0.01$
 ![small_alpha](./images/training_alpha_0.01_2_3.gif)
 
 Decision Boundary for $\alpha = 0.2$
-![medium_alpha](images/training_alpha_0.2_2_3.gif)
+![medium_alpha](./images/training_alpha_0.2_2_3.gif)
 
 Decision Boundary for $\alpha = 1$
-![large_alpha](images/training_alpha_1_2_3.gif)
+![large_alpha](./images/training_alpha_1_2_3.gif)
 
 In the first case ($\alpha=0.01$) we can see that the decision boundary is not very accurate since we are not able to reach a minimum before the end of the training. In the second case ($\alpha=0.2$) we can see that the decision boundary is more accurate and that our $\theta$ is closer to a minimum. Finally, in the third case ($\alpha=1$) we can see that even if the decision boundary is quite accurate it "jumps" a lot, making very difficult to reach a precise value of $\theta$ that solves the minimization problem.
 
@@ -51,13 +51,13 @@ Over the same $\alpha$ values, we can see to reach a minimum we require multiple
 Three iteration over the entire dataset for $\alpha = 0.2$:
 
 Decision Boundary for $\alpha = 0.2$ and $k = 1$
-![k=1](images/training_alpha_0.2_0_3.gif)
+![k=1](./images/training_alpha_0.2_0_3.gif)
 
 Decision Boundary for $\alpha = 0.2$ and $k = 2$
-![k=2](images/training_alpha_0.2_1_3.gif)
+![k=2](./images/training_alpha_0.2_1_3.gif)
 
 Decision Boundary for $\alpha = 0.2$ and $k = 3$
-![k=3](images/training_alpha_0.2_2_3.gif)
+![k=3](./images/training_alpha_0.2_2_3.gif)
 
 We can see how the decision boundary become more and more accurate as we increase the number of iterations.
 

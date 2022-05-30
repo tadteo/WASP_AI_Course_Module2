@@ -32,7 +32,7 @@ Varing $\alpha$ we can see how "fast" the gradient descent has been performing.
 We can see for instance in the following images how the decision boundary changes as we increase the value of alpha:
 
 Decision Boundary for $\alpha = 0.01$
-![small_alpha](images/training_alpha_0.01_2_3.gif)
+![small_alpha](./images/training_alpha_0.01_2_3.gif)
 
 Decision Boundary for $\alpha = 0.2$
 ![medium_alpha](images/training_alpha_0.2_2_3.gif)

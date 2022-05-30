@@ -381,15 +381,15 @@ code {
 The format is <code>training_alpha_{alpha}_{k}_3.gif</code> (where k is the number of iterations of the entire dataset, alpha the learning rate, and the history of the weights is updated after 3 gradient descent, hence a single frame contains 3 gradient descent steps).</p>
 <h2 id="result-and-evaluation">Result and evaluation</h2>
 <p>We will start calculating the gradient of $F$ for the various components of $\theta$.</p>
-<p>\[\frac{\partial}{\partial w_i} F = \frac{-y_i<em>x_i</em>e^{-y_i*(&lt;w_i*x_i&gt; + b)}}{1+e^{-y_i(&lt;x_i,w&gt;+b)}}\]</p>
-<p>\[\frac{\partial}{\partial b} F = \frac{-y_i<em>e^{-y_i</em>(&lt;w_i*x_i&gt; + b)}}{1+e^{-y_i(&lt;x_i,w&gt;+b)}}\]</p>
+<p>$$\frac{\partial}{\partial w_i} F = \frac{-y_i<em>x_i</em>e^{-y_i*(&lt;w_i*x_i&gt; + b)}}{1+e^{-y_i(&lt;x_i,w&gt;+b)}}$$</p>
+<p>$$\frac{\partial}{\partial b} F = \frac{-y_i<em>e^{-y_i</em>(&lt;w_i*x_i&gt; + b)}}{1+e^{-y_i(&lt;x_i,w&gt;+b)}}$$</p>
 <p>This has been used to calculate the gradient of the cost function and hence perform the gradient descent. This can be seen in the code in the <code>gradient_descent</code> function of the <code>project_3.py</code> file.</p>
 <p>We have then test the algorithm varing 2 different values:</p>
 <ul>
 <li>ALPHA, with the following values: [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10]</li>
 <li>And number of iterations over the entire dataset, with the following values: [1,2,3]</li>
 </ul>
-<p>Varing \(\alpha$\) we can see how &quot;fast&quot; the gradient descent has been performing.
+<p>Varing \(\alpha\) we can see how &quot;fast&quot; the gradient descent has been performing.
 We can see for instance in the following images how the decision boundary changes as we increase the value of alpha:</p>
 <p>Decision Boundary for $\alpha = 0.01$
 <img src="../images/training_alpha_0.01_2_3.gif" alt="small_alpha"></p>

@@ -378,15 +378,15 @@ code {
 The format is <code>training_alpha_{alpha}_{k}_3.gif</code> (where k is the number of iterations of the entire dataset, alpha the learning rate, and the history of the weights is updated after 3 gradient descent, hence a single frame contains 3 gradient descent steps).</p>
 <h2 id="result-and-evaluation">Result and evaluation</h2>
 <p>We will start calculating the gradient of $F$ for the various components of $\theta$.</p>
-<p>$$\frac{\partial}{\partial w_i} F = \frac{-y_i<em>x_i</em>e^{-y_i*(&lt;w_i*x_i&gt; + b)}}{1+e^{-y_i(&lt;x_i,w&gt;+b)}}$$</p>
-<p>$$\frac{\partial}{\partial b} F = \frac{-y_i<em>e^{-y_i</em>(&lt;w_i*x_i&gt; + b)}}{1+e^{-y_i(&lt;x_i,w&gt;+b)}}$$</p>
+<p>\[\frac{\partial}{\partial w_i} F = \frac{-y_i<em>x_i</em>e^{-y_i*(&lt;w_i*x_i&gt; + b)}}{1+e^{-y_i(&lt;x_i,w&gt;+b)}}\]</p>
+<p>\[\frac{\partial}{\partial b} F = \frac{-y_i<em>e^{-y_i</em>(&lt;w_i*x_i&gt; + b)}}{1+e^{-y_i(&lt;x_i,w&gt;+b)}}\]</p>
 <p>This has been used to calculate the gradient of the cost function and hence perform the gradient descent. This can be seen in the code in the <code>gradient_descent</code> function of the <code>project_3.py</code> file.</p>
 <p>We have then test the algorithm varing 2 different values:</p>
 <ul>
 <li>ALPHA, with the following values: [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10]</li>
 <li>And number of iterations over the entire dataset, with the following values: [1,2,3]</li>
 </ul>
-<p>Varing $\alpha$ we can see how &quot;fast&quot; the gradient descent has been performing.
+<p>Varing \(\alpha$\) we can see how &quot;fast&quot; the gradient descent has been performing.
 We can see for instance in the following images how the decision boundary changes as we increase the value of alpha:</p>
 <p>Decision Boundary for $\alpha = 0.01$
 <img src="./images/training_alpha_0.01_2_3.gif" alt="small_alpha"></p>
@@ -396,8 +396,8 @@ We can see for instance in the following images how the decision boundary change
 <img src="./images/training_alpha_1_2_3.gif" alt="large_alpha"></p>
 <p>In the first case ($\alpha=0.01$) we can see that the decision boundary is not very accurate since we are not able to reach a minimum before the end of the training. In the second case ($\alpha=0.2$) we can see that the decision boundary is more accurate and that our $\theta$ is closer to a minimum. Finally, in the third case ($\alpha=1$) we can see that even if the decision boundary is quite accurate it &quot;jumps&quot; a lot, making very difficult to reach a precise value of $\theta$ that solves the minimization problem.</p>
 <hr>
-<p>Considering instead the number of iteration of training over the entire dataset, as expected we can see that with the smaller alphas, it can require multiple iterations to reach a minimum. This instead becames neglegible compared to the larger $\alpha$ values, risking however a bigger overall error.</p>
-<p>Over the same $\alpha$ values, we can see to reach a minimum we require multiple iterations along the entire dataset. However, this can became more problematic when we increase the number of iterations, since this can cause overfitting issues, however, this problem is less visible with a linear separator since is not &quot;precise&quot; enuogh to allow this kind of problem to become predominant.</p>
+<p>Considering instead the number of iteration of training over the entire dataset, as expected we can see that with the smaller alphas, it can require multiple iterations to reach a minimum. This instead becames neglegible compared to the larger \(\alpha$\) values, risking however a bigger overall error.</p>
+<p>Over the same \(\alpha$\) values, we can see to reach a minimum we require multiple iterations along the entire dataset. However, this can became more problematic when we increase the number of iterations, since this can cause overfitting issues, however, this problem is less visible with a linear separator since is not &quot;precise&quot; enuogh to allow this kind of problem to become predominant.</p>
 <p>Three iteration over the entire dataset for $\alpha = 0.2$:</p>
 <p>Decision Boundary for $\alpha = 0.2$ and $k = 1$
 <img src="./images/training_alpha_0.2_0_3.gif" alt="k=1"></p>
@@ -407,7 +407,7 @@ We can see for instance in the following images how the decision boundary change
 <img src="./images/training_alpha_0.2_2_3.gif" alt="k=3"></p>
 <p>We can see how the decision boundary become more and more accurate as we increase the number of iterations.</p>
 <hr>
-<p>In conclusion, both the learning rate ($\alpha$) and the number of iterations over the entire dataset ($k$) can be used to improve the performance of the learning algorithm, however, it is important to tweak these values in the correct way to avoid jumps in performance or overfitting.</p>
+<p>In conclusion, both the learning rate (\(\alpha$\)) and the number of iterations over the entire dataset ($k$) can be used to improve the performance of the learning algorithm, however, it is important to tweak these values in the correct way to avoid jumps in performance or overfitting.</p>
 
 </body>
 </html>

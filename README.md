@@ -1,5 +1,7 @@
 # WASP_AI_Course_Module2
 
+You can read this page with images and formula here: [WASP_AI_Course_Module2](https://tadteo.github.io/WASP_AI_Course_Module2/)
+
 This repo contains the code for project number 3 of the WASP_AI_Course_Module2 course assignment.
 
 To execute the code you just need to run the following command:

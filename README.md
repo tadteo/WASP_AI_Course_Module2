@@ -19,9 +19,7 @@ We will start calculating the gradient of $F$ for the various components of $\th
 
 $$\frac{\partial}{\partial w_i} F = \frac{-y_i*x_i*e^{-y_i*(<w_i*x_i> + b)}}{1+e^{-y_i(<x_i,w>+b)}}$$
 
-$$
-\frac{\partial}{\partial b} F = \frac{-y_i*e^{-y_i*(<w_i*x_i> + b)}}{1+e^{-y_i(<x_i,w>+b)}}
-$$
+$$\frac{\partial}{\partial b} F = \frac{-y_i*e^{-y_i*(<w_i*x_i> + b)}}{1+e^{-y_i(<x_i,w>+b)}}$$
 
 This has been used to calculate the gradient of the cost function and hence perform the gradient descent. This can be seen in the code in the `gradient_descent` function of the `project_3.py` file.
 

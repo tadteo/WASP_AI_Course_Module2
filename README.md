@@ -35,13 +35,13 @@ We have then test the algorithm varing 2 different values:
 Varing $\alpha$ we can see how "fast" the gradient descent has been performing.
 We can see for instance in the following images how the decision boundary changes as we increase the value of alpha:
 
-Decision Boundary for $\alpha$ = 0.01
+Decision Boundary for $\alpha = 0.01$
 ![small_alpha](images/training_alpha_0.01_2_3.gif)
 
-Decision Boundary for $\alpha$ = 0.2
+Decision Boundary for $\alpha = 0.2$
 ![medium_alpha](images/training_alpha_0.2_2_3.gif)
 
-Decision Boundary for $\alpha$ = 1
+Decision Boundary for $\alpha = 1$
 ![large_alpha](images/training_alpha_1_2_3.gif)
 
 In the first case ($\alpha=0.01$) we can see that the decision boundary is not very accurate since we are not able to reach a minimum before the end of the training. In the second case ($\alpha=0.2$) we can see that the decision boundary is more accurate and that our $\theta$ is closer to a minimum. Finally, in the third case ($\alpha=1$) we can see that even if the decision boundary is quite accurate it "jumps" a lot, making very difficult to reach a precise value of $\theta$ that solves the minimization problem.
@@ -52,15 +52,15 @@ Considering instead the number of iteration of training over the entire dataset,
 
 Over the same $\alpha$ values, we can see to reach a minimum we require multiple iterations along the entire dataset. However, this can became more problematic when we increase the number of iterations, since this can cause overfitting issues, however, this problem is less visible with a linear separator since is not "precise" enuogh to allow this kind of problem to become predominant.
 
-Three iteration over the entire dataset for $\alpha$ = 0.2$:
+Three iteration over the entire dataset for $\alpha = 0.2$:
 
-Decision Boundary for $\alpha$ = 0.2 and k = 1
+Decision Boundary for $\alpha = 0.2$ and $k = 1$
 ![k=1](images/training_alpha_0.2_0_3.gif)
 
-Decision Boundary for $\alpha$ = 0.2 and k = 2
+Decision Boundary for $\alpha = 0.2$ and $k = 2$
 ![k=2](images/training_alpha_0.2_1_3.gif)
 
-Decision Boundary for $\alpha$ = 0.2 and k = 3
+Decision Boundary for $\alpha = 0.2$ and $k = 3$
 ![k=3](images/training_alpha_0.2_2_3.gif)
 
 We can see how the decision boundary become more and more accurate as we increase the number of iterations.

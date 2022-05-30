@@ -17,9 +17,7 @@ The format is training_alpha_{alpha}_{k}_3.gif (where k is the number of iterati
 
 We will start calculating the gradient of $F$ for the various components of $\theta$.
 
-$$
-\frac{\partial}{\partial w_i} F = \frac{-y_i*x_i*e^{-y_i*(<w_i*x_i> + b)}}{1+e^{-y_i(<x_i,w>+b)}}
-$$
+$$\frac{\partial}{\partial w_i} F = \frac{-y_i*x_i*e^{-y_i*(<w_i*x_i> + b)}}{1+e^{-y_i(<x_i,w>+b)}}$$
 
 $$
 \frac{\partial}{\partial b} F = \frac{-y_i*e^{-y_i*(<w_i*x_i> + b)}}{1+e^{-y_i(<x_i,w>+b)}}

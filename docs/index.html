@@ -390,7 +390,7 @@ The format is <code>training_alpha_{alpha}_{k}_3.gif</code> (where k is the numb
 We can see for instance in the following images how the decision boundary changes as we increase the value of alpha:</p>
 <p>Decision Boundary for $\alpha = 0.01$
 <img src="./images/training_alpha_0.01_2_3.gif" alt="small_alpha"></p>
-<p>Decision Boundary for $\alpha = 0.2$
+<p>Decision Boundary for \(\alpha = 0.2\)
 <img src="./images/training_alpha_0.2_2_3.gif" alt="medium_alpha"></p>
 <p>Decision Boundary for $\alpha = 1$
 <img src="./images/training_alpha_1_2_3.gif" alt="large_alpha"></p>
@@ -398,12 +398,12 @@ We can see for instance in the following images how the decision boundary change
 <hr>
 <p>Considering instead the number of iteration of training over the entire dataset, as expected we can see that with the smaller alphas, it can require multiple iterations to reach a minimum. This instead becames neglegible compared to the larger \(\alpha$\) values, risking however a bigger overall error.</p>
 <p>Over the same \(\alpha$\) values, we can see to reach a minimum we require multiple iterations along the entire dataset. However, this can became more problematic when we increase the number of iterations, since this can cause overfitting issues, however, this problem is less visible with a linear separator since is not &quot;precise&quot; enuogh to allow this kind of problem to become predominant.</p>
-<p>Three iteration over the entire dataset for $\alpha = 0.2$:</p>
-<p>Decision Boundary for $\alpha = 0.2$ and $k = 1$
+<p>Three iteration over the entire dataset for \(\alpha = 0.2\):</p>
+<p>Decision Boundary for \(\alpha = 0.2\) and \(k = 1\)
 <img src="./images/training_alpha_0.2_0_3.gif" alt="k=1"></p>
-<p>Decision Boundary for $\alpha = 0.2$ and $k = 2$
+<p>Decision Boundary for \(\alpha = 0.2\) and \(k = 2\)
 <img src="./images/training_alpha_0.2_1_3.gif" alt="k=2"></p>
-<p>Decision Boundary for $\alpha = 0.2$ and $k = 3$
+<p>Decision Boundary for \(\alpha = 0.2\) and \(k = 3\)
 <img src="./images/training_alpha_0.2_2_3.gif" alt="k=3"></p>
 <p>We can see how the decision boundary become more and more accurate as we increase the number of iterations.</p>
 <hr>

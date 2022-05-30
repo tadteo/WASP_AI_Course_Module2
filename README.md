@@ -5,13 +5,13 @@ This repo contains the code for project number 3 of the WASP_AI_Course_Module2 c
 To execute the code you just need to run the following command:
 
 ```bash
-python project3.py
+python project_3.py
 ```
 
 The code will first generate the halfmoon datasets (Train and Validation), then will train the model with different ALPHA values and will save a gif with the evolution of the linear separator that the algorithm has learned.
 
 In the folder images you will find the results of a previous execution of the code.
-The format is training_alpha_{alpha}_{k}_3.gif (where k is the number of iterations of the entire dataset, alpha the learning rate, and the history of the weights is updated after 3 gradient descent, hence a single frame contains 3 gradient descent steps).
+The format is `training_alpha_{alpha}_{k}_3.gif` (where k is the number of iterations of the entire dataset, alpha the learning rate, and the history of the weights is updated after 3 gradient descent, hence a single frame contains 3 gradient descent steps).
 
 ## Result and evaluation
 

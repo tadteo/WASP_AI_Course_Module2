@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from cProfile import label
 import math
 
 from matplotlib import animation
@@ -94,7 +95,7 @@ def main():
         
         train_err = []
         test_err = []
-        
+        i_for_plot = []
         #loop to iterate multiple times trough the dataset
         for k in range(3):
             i =0
@@ -116,19 +117,20 @@ def main():
                     # print(w,b)    
                 
                 #calculating training error
-                train_err = avg_err(train_data,w,b)
-                print(f"{i} - training error: {train_err}")
+                train_err.append(avg_err(train_data,w,b))
+                # print(f"{i} - training error: {train_err}")
                 #calculating test error
-                test_err = avg_err(test_data,w,b)            
-                print(f"{i} - test error: {test_err}")
+                test_err.append(avg_err(test_data,w,b))            
+                # print(f"{i} - test error: {test_err}")
                 # plot(training_dataset,test_dataset,w,b)
                 w_history.append(w)
                 b_history.append(b)
-                
+                i_for_plot.append(k*200+i*EPOCH)
                 i+=1
             
             # plot(training_dataset,test_dataset,w,b)
             
+           
             fig,ax = plt.subplots()
             
             def animate(j):
@@ -169,6 +171,15 @@ def main():
             animation = FuncAnimation(fig, animate, frames=frames, interval=40, repeat=True)   
             animation.save(f"training_alpha_{alpha}_{k}_3.gif", dpi=300, writer=PillowWriter(fps=25))
             # plt.show()
+            
+        plt.clf()    
+            
+        plt.figure()
+        plt.plot(i_for_plot, train_err, label="train error")
+        plt.plot(i_for_plot, test_err, label="test error")
+        plt.legend(loc='upper right')
+        # plt.show()
+        plt.savefig(f"error_training_alpha_{alpha}_{k}_3.png")
         
 
 

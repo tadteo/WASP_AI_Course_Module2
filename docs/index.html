@@ -407,6 +407,13 @@ We can see for instance in the following images how the decision boundary change
 <p>Decision Boundary for $\alpha = 1$
 <img src="training_alpha_1_2_3.gif" alt="large_alpha"></p>
 <p>In the first case ($\alpha=0.01$) we can see that the decision boundary is not very accurate since we are not able to reach a minimum before the end of the training. In the second case ($\alpha=0.2$) we can see that the decision boundary is more accurate and that our $\theta$ is closer to a minimum. Finally, in the third case ($\alpha=1$) we can see that even if the decision boundary is quite accurate it &quot;jumps&quot; a lot, making very difficult to reach a precise value of $\theta$ that solves the minimization problem.</p>
+<p>The corresponding plot of the errors are:</p>
+<p>Decision Boundary for $\alpha = 0.01$
+<img src="error_training_alpha_0.01_2_3.gif" alt="small_alpha"></p>
+<p>Decision Boundary for \(\alpha = 0.2\)
+<img src="error_training_alpha_0.2_2_3.gif" alt="medium_alpha"></p>
+<p>Decision Boundary for $\alpha = 1$
+<img src="error_training_alpha_1_2_3.gif" alt="large_alpha"></p>
 <hr>
 <p>Considering instead the number of iteration of training over the entire dataset, as expected we can see that with the smaller alphas, it can require multiple iterations to reach a minimum. This instead becames neglegible compared to the larger \(\alpha\) values, risking however a bigger overall error.</p>
 <p>Over the same \(\alpha\) values, we can see to reach a minimum we require multiple iterations along the entire dataset. However, this can became more problematic when we increase the number of iterations, since this can cause overfitting issues, however, this problem is less visible with a linear separator since is not &quot;precise&quot; enuogh to allow this kind of problem to become predominant.</p>
